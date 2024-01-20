@@ -1,4 +1,5 @@
 .idea/
+docker-compose.override.yml
 
 ### Python template
 # Byte-compiled / optimized / DLL files
