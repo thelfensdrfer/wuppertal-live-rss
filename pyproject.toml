@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "wuppertal-live-rss"
+version = "0.1.0"
+description = ""
+authors = ["Tim Helfensdörfer <thelfensdrfer@gmail.com>"]
+readme = "README.md"
+packages = [{include = "wuppertal_live_rss"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.109.0"
+uvicorn = "^0.26.0"
+fastapi-utils = "^0.2.1"
+beautifulsoup4 = "^4.12.3"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
