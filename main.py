@@ -138,13 +138,13 @@ async def refresh_rss():
         )
 
     # Convert event list to RSS
-    rss = f"""<?xml version="1.0" encoding="UTF-8" ?>
+    rss = f"""<?xml version="1.0" encoding="UTF-8"?>
     <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
         <channel>
             <title>Wuppertal Live</title>
             <link>https://www.wuppertal-live.de</link>
-            <description>Wuppertal Live</description>
-            <language>de-de</language>
+            <description>Wuppertal Live Kinderveranstaltungen</description>
+            <language>de</language>
             <lastBuildDate>{datetime.utcnow().strftime("%a, %d %b %Y %H:%M:%S")} GMT</lastBuildDate>
             <ttl>60</ttl>
             <atom:link href="https://wuppertal-live.thelfensdrfer.de/rss.xml" rel="self" type="application/rss+xml" />
