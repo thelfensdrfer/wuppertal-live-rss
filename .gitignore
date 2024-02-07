@@ -1,5 +1,7 @@
 .idea/
+.docker_env
 docker-compose.override.yml
+db.sqlite
 
 ### Python template
 # Byte-compiled / optimized / DLL files
