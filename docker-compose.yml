@@ -1,7 +1,14 @@
 version: '3'
 
+volumes:
+    db:
+
 services:
     app:
         build:
             context: .
             dockerfile: Dockerfile
+        env_file:
+            - .docker_env
+        volumes:
+            - db:/app/db.sqlite
