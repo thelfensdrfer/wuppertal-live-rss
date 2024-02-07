@@ -11,4 +11,4 @@ services:
         env_file:
             - .docker_env
         volumes:
-            - db:/app/db.sqlite
+            - db:/app/database

@@ -188,7 +188,7 @@ def save_to_db(events: list):
     """
     logger.info(f"Saving {len(events)} events to database...")
 
-    conn = sqlite3.connect("db.sqlite")
+    conn = sqlite3.connect("database/db.sqlite")
     cursor = conn.cursor()
 
     new_events = []
