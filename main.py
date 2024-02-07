@@ -67,7 +67,7 @@ def convert_events_to_xml_items(events: list) -> str:
 
 @app.on_event("startup")
 async def migrate():
-    conn = sqlite3.connect("db.sqlite")
+    conn = sqlite3.connect("database/db.sqlite")
     sql_file_paths = ["migrations/001_initial.sql"]
     for sql_file_path in sql_file_paths:
         with open(sql_file_path, "r") as sql_file:
