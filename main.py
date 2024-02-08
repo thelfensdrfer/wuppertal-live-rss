@@ -149,11 +149,14 @@ def notify_new_events(events: list[dict]) -> bool:
     body = "<h1>Neue Veranstaltungen bei Wuppertal Live</h1>"
 
     for event in events:
+        url = WUPPERTAL_LIVE_BASE_URL + f"/{event['id']}"
+
         body += f"""
-        <h2 style="margin-bottom: 4;">{event['title']}</h2>
+        <h2 style="margin-bottom: 4;"><a href="{url}">{event['title']}</a></h2>
         <h3>{event['date'].strftime("%A, %d. %B %Y")}</h3>
         <p style="margin-bottom: 4px;">{event['start']} {('-' + event['end']) if event['end'] else ''}</p>
         <p>{event['location']}</p>
+        <a href="{url}">Mehr Informationen</a>
         <img style="margin-bottom: 30px;" src="{event['foto']}" />
         """
 
