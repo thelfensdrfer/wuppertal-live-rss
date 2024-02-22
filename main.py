@@ -38,7 +38,7 @@ async def rss():
 
 @app.get("/api/v1/status")
 async def status():
-    return {"status": f"ok"}
+    return {"status": "ok"}
 
 
 def convert_events_to_xml_items(events: list) -> str:
